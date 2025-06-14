@@ -1,0 +1,499 @@
+/* Базовые стили */
+:root {
+    --primary-color: #232E52;
+    --secondary-color: #EBF2FE;
+    --accent-color: #8CEEAD;
+    --yellow-accent: #F7DF61;
+    --white: #FFFFFF;
+    --light-text: #EDFCF2;
+    --dark-text-opacity: rgba(17, 17, 24, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--white);
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Заголовки */
+h1 {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.56px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.33;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+/* Шапка */
+.header {
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 70px 0;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.blog-title {
+    color: var(--white);
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo img {
+    height: 18px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.navigation a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.subscribe-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Декоративные элементы */
+.decoration {
+    position: absolute;
+    z-index: 1;
+}
+
+.decoration-left {
+    left: 5%;
+    bottom: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(140, 238, 173, 0.2);
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.decoration-right {
+    right: 5%;
+    top: -50px;
+    width: 180px;
+    height: 180px;
+    background-color: rgba(247, 223, 97, 0.2);
+    border-radius: 50%;
+    transform: scale(1.2);
+}
+
+/* Категория тег */
+.category-tag {
+    display: inline-flex;
+    padding: 8px 12px 10px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    margin-bottom: 20px;
+    align-self: flex-start;
+    margin-left: 255px;
+}
+
+.category-tag span {
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Секция героя */
+.hero {
+    max-width: 970px;
+    margin-bottom: 100px;
+    align-self: flex-start;
+    margin-left: 255px;
+}
+
+/* Заголовок категории */
+.category-title {
+    margin-bottom: 60px;
+    align-self: flex-start;
+    margin-left: 255px;
+}
+
+/* Сетка постов */
+.posts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 970px;
+    align-self: flex-start;
+    margin-left: 255px;
+}
+
+/* Стили для поста */
+.post {
+    display: flex;
+    gap: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.post-content {
+    flex: 1;
+    max-width: 610px;
+}
+
+.post-tags {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tag-blue {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 6px 0 0 6px;
+}
+
+.tag-white {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-radius: 0 6px 6px 0;
+    font-weight: 400;
+}
+
+.post-title {
+    margin-bottom: 12px;
+}
+
+.post-excerpt {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.post-thumbnail img {
+    width: 300px;
+    height: 210px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Кнопка "Больше статей" */
+.more-articles {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.more-articles button {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Секция подписки */
+.subscribe-box {
+    position: relative;
+    max-width: 970px;
+    height: 325px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+    margin: 0 auto 40px;
+}
+
+.decoration-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105px;
+    height: 102px;
+    background-color: var(--accent-color);
+    border-radius: 0 0 50% 0;
+    opacity: 0.3;
+}
+
+.subscribe-box h3 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 12px;
+    z-index: 1;
+    font-size: 32px;
+}
+
+.subscribe-box p {
+    color: var(--white);
+    opacity: 0.8;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+.subscribe-form {
+    display: flex;
+    width: 400px;
+    height: 50px;
+    z-index: 1;
+}
+
+.subscribe-form input {
+    flex: 1;
+    height: 100%;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 14px;
+    color: var(--dark-text-opacity);
+}
+
+.subscribe-form button {
+    width: 136px;
+    height: 100%;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 0 8px 8px 0;
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #6cd88d;
+}
+
+/* Подвал */
+.footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 40px 0;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 50px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: var(--white);
+    opacity: 0.1;
+    margin-bottom: 40px;
+}
+
+.footer .copyright {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white);
+    margin-top: 20px;
+}
+
+.footer-decoration-left {
+    left: 10%;
+    bottom: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(140, 238, 173, 0.15);
+    border-radius: 50%;
+}
+
+.footer-decoration-right {
+    right: 10%;
+    top: -40px;
+    width: 130px;
+    height: 130px;
+    background-color: rgba(247, 223, 97, 0.15);
+    border-radius: 50%;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 992px) {
+    .post {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .post-thumbnail img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 0;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .navigation ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    .subscribe-form {
+        width: 100%;
+    }
+    
+    .category-tag,
+    .hero,
+    .category-title,
+    .posts-grid {
+        margin-left: 0;
+        align-self: center;
+    }
+    
+    .decoration-left,
+    .decoration-right,
+    .footer-decoration-left,
+    .footer-decoration-right {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .subscribe-form {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .subscribe-form input {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+    
+    .subscribe-form button {
+        width: 100%;
+        border-radius: 8px;
+        padding: 15px;
+    }
+} 
